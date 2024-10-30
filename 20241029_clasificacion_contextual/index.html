@@ -38,8 +38,11 @@
         <script src="js/leaflet-measure.js"></script>
         <script src="data/Alcaldas_1.js"></script>
         <script src="data/Clusters_2.js"></script>
-        <script src="data/Homicidiosenesept_3.js"></script>
-        <script src="data/Homicidiosoctubre_4.js"></script>
+        <script src="data/Clasificacincontextualarmadefuego_3.js"></script>
+        <script src="data/Clasificacincontextualarmadefuegogrupos_4.js"></script>
+        <script src="data/Homicidiosportipodearma_5.js"></script>
+        <script src="data/Homicidiosenesept_6.js"></script>
+        <script src="data/Homicidiosoctubre_7.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -209,7 +212,7 @@
         });
         bounds_group.addLayer(layer_Clusters_2);
         map.addLayer(layer_Clusters_2);
-        function pop_Homicidiosenesept_3(feature, layer) {
+        function pop_Clasificacincontextualarmadefuego_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Carpeta</th>\
@@ -247,9 +250,480 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Homicidiosenesept_3_0() {
+        function style_Clasificacincontextualarmadefuego_3_0(feature) {
+            switch(String(feature.properties['clasificacion_contextual'])) {
+                case 'Ajuste de cuentas entre delincuentes':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,19,173,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Bala perdida':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(128,118,232,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Conflictos personales':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(237,195,25,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Crimen de odio':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(158,55,222,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Desconocido':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(117,117,117,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Ejecución':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(87,209,121,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Grupos delictivos':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(50,123,201,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Riña':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(106,207,150,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Robo':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(214,101,63,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Violencia de género':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuego_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,154,153,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Clasificacincontextualarmadefuego_3');
+        map.getPane('pane_Clasificacincontextualarmadefuego_3').style.zIndex = 403;
+        map.getPane('pane_Clasificacincontextualarmadefuego_3').style['mix-blend-mode'] = 'normal';
+        var layer_Clasificacincontextualarmadefuego_3 = new L.geoJson(json_Clasificacincontextualarmadefuego_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Clasificacincontextualarmadefuego_3',
+            layerName: 'layer_Clasificacincontextualarmadefuego_3',
+            pane: 'pane_Clasificacincontextualarmadefuego_3',
+            onEachFeature: pop_Clasificacincontextualarmadefuego_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Clasificacincontextualarmadefuego_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Clasificacincontextualarmadefuego_3);
+        function pop_Clasificacincontextualarmadefuegogrupos_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Carpeta</th>\
+                        <td>' + (feature.properties['carpeta_investigacion'] !== null ? autolinker.link(feature.properties['carpeta_investigacion'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Fecha inicio</th>\
+                        <td>' + (feature.properties['fecha_inicio'] !== null ? autolinker.link(feature.properties['fecha_inicio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Fecha hechos</th>\
+                        <td>' + (feature.properties['fecha_hechos'] !== null ? autolinker.link(feature.properties['fecha_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Hora hechos</th>\
+                        <td>' + (feature.properties['hora_hechos'] !== null ? autolinker.link(feature.properties['hora_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Exordio</th>\
+                        <td>' + (feature.properties['exordio'] !== null ? autolinker.link(feature.properties['exordio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Alcaldía</th>\
+                        <td>' + (feature.properties['alcaldia_hechos'] !== null ? autolinker.link(feature.properties['alcaldia_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Colonia</th>\
+                        <td>' + (feature.properties['colonia_hechos'] !== null ? autolinker.link(feature.properties['colonia_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_Clasificacincontextualarmadefuegogrupos_4_0(feature) {
+            switch(String(feature.properties['clasificacion_contextual'])) {
+                case 'Ajuste de cuentas entre delincuentes':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuegogrupos_4',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,19,173,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Ejecución':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuegogrupos_4',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(87,209,121,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Grupos delictivos':
+                    return {
+                pane: 'pane_Clasificacincontextualarmadefuegogrupos_4',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,120,180,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Clasificacincontextualarmadefuegogrupos_4');
+        map.getPane('pane_Clasificacincontextualarmadefuegogrupos_4').style.zIndex = 404;
+        map.getPane('pane_Clasificacincontextualarmadefuegogrupos_4').style['mix-blend-mode'] = 'normal';
+        var layer_Clasificacincontextualarmadefuegogrupos_4 = new L.geoJson(json_Clasificacincontextualarmadefuegogrupos_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Clasificacincontextualarmadefuegogrupos_4',
+            layerName: 'layer_Clasificacincontextualarmadefuegogrupos_4',
+            pane: 'pane_Clasificacincontextualarmadefuegogrupos_4',
+            onEachFeature: pop_Clasificacincontextualarmadefuegogrupos_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Clasificacincontextualarmadefuegogrupos_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Clasificacincontextualarmadefuegogrupos_4);
+        function pop_Homicidiosportipodearma_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Carpeta</th>\
+                        <td>' + (feature.properties['carpeta_investigacion'] !== null ? autolinker.link(feature.properties['carpeta_investigacion'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Fecha inicio</th>\
+                        <td>' + (feature.properties['fecha_inicio'] !== null ? autolinker.link(feature.properties['fecha_inicio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Fecha hechos</th>\
+                        <td>' + (feature.properties['fecha_hechos'] !== null ? autolinker.link(feature.properties['fecha_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Hora hechos</th>\
+                        <td>' + (feature.properties['hora_hechos'] !== null ? autolinker.link(feature.properties['hora_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Exordio</th>\
+                        <td>' + (feature.properties['exordio'] !== null ? autolinker.link(feature.properties['exordio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Alcaldía</th>\
+                        <td>' + (feature.properties['alcaldia_hechos'] !== null ? autolinker.link(feature.properties['alcaldia_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Colonia</th>\
+                        <td>' + (feature.properties['colonia_hechos'] !== null ? autolinker.link(feature.properties['colonia_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_Homicidiosportipodearma_5_0(feature) {
+            switch(String(feature.properties['modalidad_delito'])) {
+                case 'HOMICIDIO POR ARMA DE FUEGO':
+                    return {
+                pane: 'pane_Homicidiosportipodearma_5',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(211,47,99,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'HOMICIDIO POR ARMA BLANCA':
+                    return {
+                pane: 'pane_Homicidiosportipodearma_5',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(125,159,251,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'HOMICIDIO POR GOLPES':
+                    return {
+                pane: 'pane_Homicidiosportipodearma_5',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,0,0,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'HOMICIDIO POR AHORCAMIENTO':
+                    return {
+                pane: 'pane_Homicidiosportipodearma_5',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,196,112,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'HOMICIDIOS INTENCIONALES (OTROS)':
+                    return {
+                pane: 'pane_Homicidiosportipodearma_5',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(87,209,121,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Homicidiosportipodearma_5');
+        map.getPane('pane_Homicidiosportipodearma_5').style.zIndex = 405;
+        map.getPane('pane_Homicidiosportipodearma_5').style['mix-blend-mode'] = 'normal';
+        var layer_Homicidiosportipodearma_5 = new L.geoJson(json_Homicidiosportipodearma_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Homicidiosportipodearma_5',
+            layerName: 'layer_Homicidiosportipodearma_5',
+            pane: 'pane_Homicidiosportipodearma_5',
+            onEachFeature: pop_Homicidiosportipodearma_5,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Homicidiosportipodearma_5_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Homicidiosportipodearma_5);
+        function pop_Homicidiosenesept_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Carpeta</th>\
+                        <td>' + (feature.properties['carpeta_investigacion'] !== null ? autolinker.link(feature.properties['carpeta_investigacion'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Fecha inicio</th>\
+                        <td>' + (feature.properties['fecha_inicio'] !== null ? autolinker.link(feature.properties['fecha_inicio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Fecha hechos</th>\
+                        <td>' + (feature.properties['fecha_hechos'] !== null ? autolinker.link(feature.properties['fecha_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Hora hechos</th>\
+                        <td>' + (feature.properties['hora_hechos'] !== null ? autolinker.link(feature.properties['hora_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Exordio</th>\
+                        <td>' + (feature.properties['exordio'] !== null ? autolinker.link(feature.properties['exordio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Alcaldía</th>\
+                        <td>' + (feature.properties['alcaldia_hechos'] !== null ? autolinker.link(feature.properties['alcaldia_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Colonia</th>\
+                        <td>' + (feature.properties['colonia_hechos'] !== null ? autolinker.link(feature.properties['colonia_hechos'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_Homicidiosenesept_6_0() {
             return {
-                pane: 'pane_Homicidiosenesept_3',
+                pane: 'pane_Homicidiosenesept_6',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -264,27 +738,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Homicidiosenesept_3');
-        map.getPane('pane_Homicidiosenesept_3').style.zIndex = 403;
-        map.getPane('pane_Homicidiosenesept_3').style['mix-blend-mode'] = 'normal';
-        var layer_Homicidiosenesept_3 = new L.geoJson(json_Homicidiosenesept_3, {
+        map.createPane('pane_Homicidiosenesept_6');
+        map.getPane('pane_Homicidiosenesept_6').style.zIndex = 406;
+        map.getPane('pane_Homicidiosenesept_6').style['mix-blend-mode'] = 'normal';
+        var layer_Homicidiosenesept_6 = new L.geoJson(json_Homicidiosenesept_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Homicidiosenesept_3',
-            layerName: 'layer_Homicidiosenesept_3',
-            pane: 'pane_Homicidiosenesept_3',
-            onEachFeature: pop_Homicidiosenesept_3,
+            dataVar: 'json_Homicidiosenesept_6',
+            layerName: 'layer_Homicidiosenesept_6',
+            pane: 'pane_Homicidiosenesept_6',
+            onEachFeature: pop_Homicidiosenesept_6,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.shapeMarker(latlng, style_Homicidiosenesept_3_0(feature));
+                return L.shapeMarker(latlng, style_Homicidiosenesept_6_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Homicidiosenesept_3);
-        map.addLayer(layer_Homicidiosenesept_3);
-        function pop_Homicidiosoctubre_4(feature, layer) {
+        bounds_group.addLayer(layer_Homicidiosenesept_6);
+        map.addLayer(layer_Homicidiosenesept_6);
+        function pop_Homicidiosoctubre_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Carpeta</th>\
@@ -322,9 +796,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Homicidiosoctubre_4_0() {
+        function style_Homicidiosoctubre_7_0() {
             return {
-                pane: 'pane_Homicidiosoctubre_4',
+                pane: 'pane_Homicidiosoctubre_7',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -339,30 +813,33 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Homicidiosoctubre_4');
-        map.getPane('pane_Homicidiosoctubre_4').style.zIndex = 404;
-        map.getPane('pane_Homicidiosoctubre_4').style['mix-blend-mode'] = 'normal';
-        var layer_Homicidiosoctubre_4 = new L.geoJson(json_Homicidiosoctubre_4, {
+        map.createPane('pane_Homicidiosoctubre_7');
+        map.getPane('pane_Homicidiosoctubre_7').style.zIndex = 407;
+        map.getPane('pane_Homicidiosoctubre_7').style['mix-blend-mode'] = 'normal';
+        var layer_Homicidiosoctubre_7 = new L.geoJson(json_Homicidiosoctubre_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Homicidiosoctubre_4',
-            layerName: 'layer_Homicidiosoctubre_4',
-            pane: 'pane_Homicidiosoctubre_4',
-            onEachFeature: pop_Homicidiosoctubre_4,
+            dataVar: 'json_Homicidiosoctubre_7',
+            layerName: 'layer_Homicidiosoctubre_7',
+            pane: 'pane_Homicidiosoctubre_7',
+            onEachFeature: pop_Homicidiosoctubre_7,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.shapeMarker(latlng, style_Homicidiosoctubre_4_0(feature));
+                return L.shapeMarker(latlng, style_Homicidiosoctubre_7_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Homicidiosoctubre_4);
-        map.addLayer(layer_Homicidiosoctubre_4);
+        bounds_group.addLayer(layer_Homicidiosoctubre_7);
+        map.addLayer(layer_Homicidiosoctubre_7);
         var baseMaps = {};
         var overlaysTree = [
-            {label: '<img src="legend/Homicidiosoctubre_4.png" /> Homicidios octubre', layer: layer_Homicidiosoctubre_4},
-            {label: '<img src="legend/Homicidiosenesept_3.png" /> Homicidios ene - sept', layer: layer_Homicidiosenesept_3},
+            {label: '<img src="legend/Homicidiosoctubre_7.png" /> Homicidios octubre', layer: layer_Homicidiosoctubre_7},
+            {label: '<img src="legend/Homicidiosenesept_6.png" /> Homicidios ene - sept', layer: layer_Homicidiosenesept_6},
+            {label: 'Homicidios por tipo de arma<br /><table><tr><td style="text-align: center;"><img src="legend/Homicidiosportipodearma_5_Porarmadefuego0.png" /></td><td>Por arma de fuego</td></tr><tr><td style="text-align: center;"><img src="legend/Homicidiosportipodearma_5_Porarmablanca1.png" /></td><td>Por arma blanca</td></tr><tr><td style="text-align: center;"><img src="legend/Homicidiosportipodearma_5_Porgolpes2.png" /></td><td>Por golpes</td></tr><tr><td style="text-align: center;"><img src="legend/Homicidiosportipodearma_5_Porahorcamiento3.png" /></td><td>Por ahorcamiento</td></tr><tr><td style="text-align: center;"><img src="legend/Homicidiosportipodearma_5_Intencionalesotros4.png" /></td><td>Intencionales (otros)</td></tr></table>', layer: layer_Homicidiosportipodearma_5},
+            {label: 'Clasificación contextual (arma de fuego- grupos)<br /><table><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuegogrupos_4_Ajustedecuentasentredelincuentes0.png" /></td><td>Ajuste de cuentas entre delincuentes</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuegogrupos_4_Ejecución1.png" /></td><td>Ejecución</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuegogrupos_4_Gruposdelictivos2.png" /></td><td>Grupos delictivos</td></tr></table>', layer: layer_Clasificacincontextualarmadefuegogrupos_4},
+            {label: 'Clasificación contextual (arma de fuego)<br /><table><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Ajustedecuentasentredelincuentes0.png" /></td><td>Ajuste de cuentas entre delincuentes</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Balaperdida1.png" /></td><td>Bala perdida</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Conflictospersonales2.png" /></td><td>Conflictos personales</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Crimendeodio3.png" /></td><td>Crimen de odio</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Desconocido4.png" /></td><td>Desconocido</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Ejecución5.png" /></td><td>Ejecución</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Gruposdelictivos6.png" /></td><td>Grupos delictivos</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Riña7.png" /></td><td>Riña</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Robo8.png" /></td><td>Robo</td></tr><tr><td style="text-align: center;"><img src="legend/Clasificacincontextualarmadefuego_3_Violenciadegénero9.png" /></td><td>Violencia de género</td></tr></table>', layer: layer_Clasificacincontextualarmadefuego_3},
             {label: '<img src="legend/Clusters_2.png" /> Clusters', layer: layer_Clusters_2},
             {label: '<img src="legend/Alcaldas_1.png" /> Alcaldías', layer: layer_Alcaldas_1},
             {label: "Positron", layer: layer_Positron_0},]
